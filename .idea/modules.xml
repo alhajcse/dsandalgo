@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/bubblesort/bubblesort.iml" filepath="$PROJECT_DIR$/bubblesort/bubblesort.iml" />
+      <module fileurl="file://$PROJECT_DIR$/dsandalgo.iml" filepath="$PROJECT_DIR$/dsandalgo.iml" />
+      <module fileurl="file://$PROJECT_DIR$/longestCommonPrefix/longestCommonPrefix.iml" filepath="$PROJECT_DIR$/longestCommonPrefix/longestCommonPrefix.iml" />
+      <module fileurl="file://$PROJECT_DIR$/miniandmaxelement/miniandmaxelement.iml" filepath="$PROJECT_DIR$/miniandmaxelement/miniandmaxelement.iml" />
+      <module fileurl="file://$PROJECT_DIR$/missinginteger/missinginteger.iml" filepath="$PROJECT_DIR$/missinginteger/missinginteger.iml" />
+      <module fileurl="file://$PROJECT_DIR$/reversearray/reversearray.iml" filepath="$PROJECT_DIR$/reversearray/reversearray.iml" />
+      <module fileurl="file://$PROJECT_DIR$/reversnumber/reversnumber.iml" filepath="$PROJECT_DIR$/reversnumber/reversnumber.iml" />
+      <module fileurl="file://$PROJECT_DIR$/reversstring/reversstring.iml" filepath="$PROJECT_DIR$/reversstring/reversstring.iml" />
+    </modules>
+  </component>
+</project>
