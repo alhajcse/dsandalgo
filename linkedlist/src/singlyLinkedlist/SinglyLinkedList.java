@@ -105,4 +105,24 @@ public class SinglyLinkedList {
         }
         return head.data;
     }
+
+    public int removeAt(int index){
+        if(index < 0 || index > size){
+            throw new IndexOutOfBoundsException();
+        }
+        if(index == 0){
+            return removeFirst();
+        }else if(index == size-1){
+            return removeLast();
+        }else{
+            Node currentNode = head;
+            for(int i = 1; i <index; i++){
+                currentNode= currentNode.next;
+            }
+            Node removeRef = currentNode.next;
+            currentNode.next=removeRef.next;
+            size--;
+            return removeRef.data;
+        }
+    }
 }
