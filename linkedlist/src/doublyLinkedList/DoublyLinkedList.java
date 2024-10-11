@@ -88,23 +88,63 @@ public class DoublyLinkedList {
     }
 
 
-    public void removeFirst()
-    {
-        if (head == null) {
-            return;
+    public int removeFirst() {
+        if(size == 0){
+            throw new IndexOutOfBoundsException();
+        }
+        if (size == 1){
+            head = tail = null;
+            size = 0;
+        }else {
+            Node temp = head;
+            head = head.next;
+            head.prev = null;
+            temp.next = null;
+            size--;
         }
 
-        if (head == tail) {
-            head = null;
-            tail = null;
-            return;
-        }
-
-        Node temp = head;
-        head = head.next;
-        head.prev = null;
-        temp.next = null;
+        return head.data;
     }
 
 
+    public int removeLast(){
+        if(size == 0){
+            throw new IndexOutOfBoundsException();
+        }
+        if (size == 1){
+            head = tail = null;
+            size = 0;
+        }else {
+            Node currentNode = tail;
+            tail = tail.prev;
+            tail.next = null;
+            currentNode.prev = null;
+            size--;
+        }
+        return head.data;
+    }
+
+
+
+    public int removeAt(int index) {
+        if(index < 0 || index > size){
+            throw new IndexOutOfBoundsException();
+        }
+        if(index == 0){
+            return removeFirst();
+        }else if(index == size-1){
+            return removeLast();
+        }else{
+            Node currentNode = head;
+            for(int i = 1; i <index; i++){
+                currentNode= currentNode.next;
+            }
+            Node removeRef = currentNode.next;
+            currentNode.next=removeRef.next;
+            removeRef.prev = null;
+            removeRef.next = null;
+            size--;
+            return removeRef.data;
+        }
+    }
 }

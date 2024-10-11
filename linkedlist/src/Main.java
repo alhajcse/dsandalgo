@@ -80,5 +80,43 @@ public class Main {
 
 
 
+
+        System.out.println("After remove first");
+        doublyLinkedList.removeFirst();
+
+        System.out.println("Size : "+doublyLinkedList.getSize());
+
+        doublyLinkedList.display();
+
+        System.out.println("head: "+doublyLinkedList.getHead());
+        System.out.println("tail: "+doublyLinkedList.getTail());
+
+
+
+        System.out.println("After remove Last");
+        doublyLinkedList.removeLast();
+
+        System.out.println("Size : "+doublyLinkedList.getSize());
+
+        doublyLinkedList.display();
+
+        System.out.println("head: "+doublyLinkedList.getHead());
+        System.out.println("tail: "+doublyLinkedList.getTail());
+
+
+
+        System.out.println("After remove At 1");
+        doublyLinkedList.removeAt(1);
+
+        System.out.println("Size : "+doublyLinkedList.getSize());
+
+        doublyLinkedList.display();
+
+        System.out.println("head: "+doublyLinkedList.getHead());
+        System.out.println("tail: "+doublyLinkedList.getTail());
+
+
+
+
     }
 }
