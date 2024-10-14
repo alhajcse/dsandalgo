@@ -24,6 +24,5 @@ public class Main {
 
         for (Map.Entry<Integer,Integer> e: hashMap.entrySet())
             System.out.println("num: " + e.getKey() + " Count: " + e.getValue());
-
     }
 }

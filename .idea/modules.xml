@@ -18,6 +18,7 @@
       <module fileurl="file://$PROJECT_DIR$/reversstring/reversstring.iml" filepath="$PROJECT_DIR$/reversstring/reversstring.iml" />
       <module fileurl="file://$PROJECT_DIR$/selectionsort/selectionsort.iml" filepath="$PROJECT_DIR$/selectionsort/selectionsort.iml" />
       <module fileurl="file://$PROJECT_DIR$/stack/stack.iml" filepath="$PROJECT_DIR$/stack/stack.iml" />
+      <module fileurl="file://$PROJECT_DIR$/tree/tree.iml" filepath="$PROJECT_DIR$/tree/tree.iml" />
     </modules>
   </component>
 </project>
