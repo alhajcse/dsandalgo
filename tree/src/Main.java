@@ -20,9 +20,9 @@ public class Main {
 //
 //        tree.maxDepth(root);
 
-        tree.traverseInOrderByIterative(root);
-        System.out.println();
-        tree.traversePreOrderByIterative(root);
+//        tree.traverseInOrderByIterative(root);
+//        System.out.println();
+//        tree.traversePreOrderByIterative(root);
 
         System.out.println();
         tree.traversePostOrderByIterative(root);
