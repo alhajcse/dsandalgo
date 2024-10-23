@@ -101,6 +101,7 @@ public class BinaryTree {
     public void traverseInOrderByIterative(Node node) {
         Stack<Node> stack=new Stack<>();
         Node current=node;
+
         while (current!=null || !stack.isEmpty()){
 
             // Visit the leftmost node
@@ -116,8 +117,6 @@ public class BinaryTree {
             current=current.rigth;
         }
     }
-
-
     public void traversePreOrderByIterative(Node node) {
         Stack<Node> stack=new Stack<>();
         Node current=node;
@@ -126,10 +125,12 @@ public class BinaryTree {
             // Current must be null at this point, pop the stack
             current=stack.pop();
             System.out.print(current.data+" -> ");
+
             // Visit the left subtree
             Node right=current.rigth;
             if(right!=null)
                 stack.push(right);
+
             // Visit the left subtree
             Node left=current.left;
             if(left!=null)
@@ -144,21 +145,23 @@ public class BinaryTree {
         stack.push(current);
 
         while (!stack.isEmpty()){
-            // Visit the left subtree
-            Node right=current.rigth;
-            if(right!=null)
-                stack.push(right);
+            // Visit the leftmost node
+            while (current!=null){
+                stack.push(current);
+                current=current.left;
+            }
 
-            // Visit the left subtree
-            Node left=current.left;
-            if(left!=null)
-                stack.push(left);
 
-            // Current must be null at this point, pop the stack
-            current=stack.pop();
-            System.out.print(current.data+" -> ");
+            if (current!=null) {
+                current=current.rigth;
+            }else {
+                current = stack.pop();
+                System.out.print(current.data+" -> ");
+                current=current.rigth;
+            }
 
-            current=right;
+
+
         }
     }
 
