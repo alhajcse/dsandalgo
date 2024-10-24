@@ -4,33 +4,23 @@ public class BSTTest {
     public static void main(String[] args) {
 
         BinarySearchTree tree=new BinarySearchTree();
-        //Node root=tree.createTree();
-        tree.insert(10);
+        tree.insert(100);
         tree.insert(20);
+        tree.insert(10);
         tree.insert(30);
         tree.insert(40);
-        tree.insert(50);
+        tree.insert(200);
+        tree.insert(150);
+        tree.insert(300);
 
+        Node root=tree.getRoot();
 
-        System.out.println(tree.toString());
+        System.out.println("root is : "+root.data);
 
-//        tree.traversePreOrder(root);
-//
-//        System.out.println("-----");
-//
- //       tree.traversePostOrder(root);
-//
-//        System.out.println("-----");
-//        System.out.println(root.data);
-//        tree.traverseInOrder(root);
-//
-//        tree.maxDepth(root);
+        tree.preOrder(root);
 
-//        System.out.println("In Order");
-//        tree.traverseInOrderByIterative(root);
-//        System.out.println("Pre Order");
-//        tree.traversePreOrderByIterative(root);
-        System.out.println("Post Order");
+        System.out.println();
+        System.out.println("Height "+tree.height(root));
 
 
     }
