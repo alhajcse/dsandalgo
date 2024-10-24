@@ -12,7 +12,7 @@ public class Main {
 //
 //        System.out.println("-----");
 //
-//        tree.traversePostOrder(root);
+ //       tree.traversePostOrder(root);
 //
 //        System.out.println("-----");
 //        System.out.println(root.data);
@@ -20,11 +20,12 @@ public class Main {
 //
 //        tree.maxDepth(root);
 
-//        tree.traverseInOrderByIterative(root);
-//        System.out.println();
-//        tree.traversePreOrderByIterative(root);
 
-        System.out.println();
+//        System.out.println("In Order");
+//        tree.traverseInOrderByIterative(root);
+//        System.out.println("Pre Order");
+//        tree.traversePreOrderByIterative(root);
+        System.out.println("Post Order");
         tree.traversePostOrderByIterative(root);
 
     }

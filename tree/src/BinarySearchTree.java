@@ -1,6 +1,5 @@
 public class BinarySearchTree {
-    Node root;
-
+    private Node root;
     public BinarySearchTree() {
         root = null;
     }
@@ -14,7 +13,7 @@ public class BinarySearchTree {
     }
 
     public void insert(int key) {
-        root = insertNode(root,key);
+        this.root = insertNode(this.root,key);
     }
 
     public Node getRoot() {
@@ -22,43 +21,97 @@ public class BinarySearchTree {
     }
 
     public Node insertNode(Node root, int key) {
-
-        if(root==null)
-            return createNode(key);
-
-        if (root.data==key)
+        if(root == null){
+            root=createNode(key);
             return root;
+        }
 
-        if(key<root.data)
+        if(key < root.data){
             root.left=insertNode(root.left,key);
-        else
+
+        } else if(key > root.data){
             root.rigth=insertNode(root.rigth,key);
 
+        }
         return root;
     }
 
-    public void inorder(Node root){
-        if(root!=null){
-            inorder(root.left);
-            System.out.print(root.data+" --> ");
-            inorder(root.rigth);
+    public void preOrder(Node root) {
+        System.out.print(root.data+" --> ");
+        if(root.left != null){
+            preOrder(root.left);
         }
+
+        if(root.rigth != null){
+            preOrder(root.rigth);
+        }
+
     }
 
 
-    public Node search(Node root,int key){
+    public void search(Node root, int key) {
 
-        if(root!=null) {
-            if (root.data == key)
-                return root;
+        if(root != null) {
+            if (root.data == key) {
+                System.out.println("Found");
+            }
+
             if (root.data > key) {
-                System.out.println("searching " + root.data);
-                return search(root.left, key);
-            }else{
-                System.out.println("searching " + root.data);
-                return search(root.rigth, key);
+                search(root.left, key);
+            }
+            if (root.data < key) {
+                search(root.rigth, key);
+            }
+        }else {
+            System.out.println("Not Found");
+        }
+    }
+
+    public Node remove(Node root, int key) {
+
+        if (root.data > key) {
+            root.left=remove(root.left, key);
+        } else if (root.data < key) {
+            root.rigth= remove(root.rigth, key);
+        }else {
+            //Case 0: 0 child
+            if (root.left == null && root.rigth == null) {
+                return null;
+            }
+            //Case 1: 1 right child
+            else if (root.left == null) {
+                return root.rigth;
+            }
+            //Case 2: 1 left child
+            else if (root.rigth == null ) {
+                return root.left;
+            }
+            //Case 2:both child
+            else {
+                Node temp=root.left;
+                while (temp.rigth != null) {
+                    temp=temp.rigth;
+                }
+                root.data=temp.data;
+                root.left=remove(root.left,temp.data);
+
             }
         }
-        return null;
+        return root;
     }
+
+
+    // Compute the "height" of a tree
+    int height(Node root) {
+        if (root == null)
+            return 0;
+        else {
+            int lh = height(root.left);
+            int rh = height(root.rigth);
+            return Math.max(lh ,rh)+1;
+
+        }
+    }
+
+
 }

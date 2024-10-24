@@ -101,6 +101,7 @@ public class BinaryTree {
     public void traverseInOrderByIterative(Node node) {
         Stack<Node> stack=new Stack<>();
         Node current=node;
+
         while (current!=null || !stack.isEmpty()){
 
             // Visit the leftmost node
@@ -116,8 +117,6 @@ public class BinaryTree {
             current=current.rigth;
         }
     }
-
-
     public void traversePreOrderByIterative(Node node) {
         Stack<Node> stack=new Stack<>();
         Node current=node;
@@ -126,10 +125,12 @@ public class BinaryTree {
             // Current must be null at this point, pop the stack
             current=stack.pop();
             System.out.print(current.data+" -> ");
+
             // Visit the left subtree
             Node right=current.rigth;
             if(right!=null)
                 stack.push(right);
+
             // Visit the left subtree
             Node left=current.left;
             if(left!=null)
@@ -140,20 +141,27 @@ public class BinaryTree {
 
     public void traversePostOrderByIterative(Node node) {
         Stack<Node> stack=new Stack<>();
-        Stack<Node> output=new Stack<>();
         Node current=node;
         stack.push(current);
 
-        while (!stack.isEmpty() ){
-            current=stack.pop();
-            output.push(current);
-            if(current.left!=null)
-                stack.push(current.left);
-            if(current.rigth!=null)
-                stack.push(current.rigth);
-        }
-        while (!output.isEmpty()){
-            System.out.print(output.pop().data+" --> ");
+        while (!stack.isEmpty()){
+            // Visit the leftmost node
+            while (current!=null){
+                stack.push(current);
+                current=current.left;
+            }
+
+
+            if (current!=null) {
+                current=current.rigth;
+            }else {
+                current = stack.pop();
+                System.out.print(current.data+" -> ");
+                current=current.rigth;
+            }
+
+
+
         }
     }
 
