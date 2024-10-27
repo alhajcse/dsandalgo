@@ -97,6 +97,20 @@ public class BinaryTree {
         return Math.max(lDepth, rDepth) + 1;
     }
 
+    public int minDepth(Node node) {
+        if (node == null)
+            return 0;
+
+        // compute the depth of left and right subtrees
+        int lDepth = maxDepth(node.left);
+        int rDepth = maxDepth(node.rigth);
+
+        return Math.min(lDepth, rDepth) + 1;
+    }
+
+
+
+
 
     public void traverseInOrderByIterative(Node node) {
         Stack<Node> stack=new Stack<>();
@@ -159,9 +173,6 @@ public class BinaryTree {
                 System.out.print(current.data+" -> ");
                 current=current.rigth;
             }
-
-
-
         }
     }
 

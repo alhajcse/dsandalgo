@@ -113,5 +113,73 @@ public class BinarySearchTree {
         }
     }
 
+    // Function to find max value in the subtree
+   public int maxValue(Node node) {
+        if (node == null) return Integer.MIN_VALUE;
+        return Math.max(node.data, Math.max(maxValue(node.left), maxValue(node.rigth)));
+    }
+
+    // Function to find min value in the subtree
+   public int minValue(Node node) {
+        if (node == null) return Integer.MAX_VALUE;
+        return Math.min(node.data, Math.min(minValue(node.left), minValue(node.rigth)));
+    }
+
+    public int maxDepth(Node node) {
+        if (node == null)
+            return 0;
+
+        // compute the depth of left and right subtrees
+        int lDepth = maxDepth(node.left);
+        int rDepth = maxDepth(node.rigth);
+
+        return Math.max(lDepth, rDepth) + 1;
+    }
+
+
+    /* Function to calculate the minimum depth of the tree */
+    int minDepth(Node root)
+    {
+        // Corner case. Should never be hit unless the code is
+        // called on root = NULL
+        if (root == null)
+            return 0;
+
+        int leftDepth = minDepth(root.left);
+        int rightDepth = minDepth(root.rigth);
+
+        // Base case : Leaf Node. This accounts for height = 1.
+        if (root.left == null && root.rigth == null)
+            return 1;
+
+        // If left subtree is NULL, recur for right subtree
+        if (root.left == null)
+            return rightDepth + 1;
+
+        // If right subtree is NULL, recur for left subtree
+        if (root.rigth == null)
+            return leftDepth + 1;
+
+        return Math.min(leftDepth,rightDepth) + 1;
+    }
+
+
+    // function to return the root of inverted tree
+    public Node mirror(Node root) {
+        if (root == null)
+            return null;
+
+        // Invert the left and right subtree
+        Node left = mirror(root.left);
+        Node right = mirror(root.rigth);
+
+        // Swap the left and right subtree
+        root.left = right;
+        root.rigth = left;
+        return root;
+    }
+
+
+
 
 }

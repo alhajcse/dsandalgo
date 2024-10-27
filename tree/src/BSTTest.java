@@ -8,10 +8,10 @@ public class BSTTest {
         tree.insert(20);
         tree.insert(10);
         tree.insert(30);
-        tree.insert(40);
+ //       tree.insert(40);
         tree.insert(200);
-        tree.insert(150);
-        tree.insert(300);
+//        tree.insert(150);
+//        tree.insert(300);
 
         Node root=tree.getRoot();
 
@@ -21,7 +21,13 @@ public class BSTTest {
 
         System.out.println();
         System.out.println("Height "+tree.height(root));
+        System.out.println("Max Value "+tree.maxValue(root));
+        System.out.println("Min Value "+tree.minValue(root));
+        System.out.println("Max Depth "+tree.maxDepth(root));
+        System.out.println("Min Depth "+tree.minDepth(root));
 
+        tree.mirror(root);
+        tree.preOrder(root);
 
     }
 }
