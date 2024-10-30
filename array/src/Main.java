@@ -16,8 +16,6 @@ public class Main {
         int out=array.remove();
 
         System.out.println("After remove"+out);
-
-
         System.out.println("Size "+array.getSize());
         array.display();
     }

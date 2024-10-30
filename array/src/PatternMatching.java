@@ -1,7 +1,6 @@
 public class PatternMatching {
     public static void main(String[] args) {
 
-
         //Full pyramid
         int n=3;
         for(int i=0;i<n;i++){
