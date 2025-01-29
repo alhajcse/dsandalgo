@@ -9,7 +9,6 @@ public class Main {
         array.add(4);
         array.add(5);
         array.add(6);
-
         System.out.println("Size "+array.getSize());
         array.display();
         int out=array.remove();
