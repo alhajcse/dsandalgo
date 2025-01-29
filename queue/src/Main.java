@@ -7,7 +7,6 @@ public class Main {
         queue.enqueue(2);
         queue.enqueue(3);
         queue.enqueue(4);
-
         System.out.println( "Size "+queue.getSize());
         queue.display();
         System.out.println("After dequeue");
