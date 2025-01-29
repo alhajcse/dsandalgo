@@ -21,7 +21,5 @@ public class Main {
         queue.enqueue(5);
         System.out.println("Size "+queue.getSize());
         queue.display();
-
-
     }
 }
