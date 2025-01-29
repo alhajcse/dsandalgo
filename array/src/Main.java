@@ -12,11 +12,8 @@ public class Main {
 
         System.out.println("Size "+array.getSize());
         array.display();
-
         int out=array.remove();
-
         System.out.println("After remove"+out);
-
 
         System.out.println("Size "+array.getSize());
         array.display();
