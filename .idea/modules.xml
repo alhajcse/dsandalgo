@@ -5,6 +5,7 @@
       <module fileurl="file://$PROJECT_DIR$/array/array.iml" filepath="$PROJECT_DIR$/array/array.iml" />
       <module fileurl="file://$PROJECT_DIR$/binarysearch/binarysearch.iml" filepath="$PROJECT_DIR$/binarysearch/binarysearch.iml" />
       <module fileurl="file://$PROJECT_DIR$/bubblesort/bubblesort.iml" filepath="$PROJECT_DIR$/bubblesort/bubblesort.iml" />
+      <module fileurl="file://$PROJECT_DIR$/callByValueAndByReference/callByValueAndByReference.iml" filepath="$PROJECT_DIR$/callByValueAndByReference/callByValueAndByReference.iml" />
       <module fileurl="file://$PROJECT_DIR$/dsandalgo.iml" filepath="$PROJECT_DIR$/dsandalgo.iml" />
       <module fileurl="file://$PROJECT_DIR$/hashmap/hashmap.iml" filepath="$PROJECT_DIR$/hashmap/hashmap.iml" />
       <module fileurl="file://$PROJECT_DIR$/linearsearch/linearsearch.iml" filepath="$PROJECT_DIR$/linearsearch/linearsearch.iml" />

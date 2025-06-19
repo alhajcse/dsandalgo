@@ -113,7 +113,7 @@ public class ConverterInJava {
         return sb.toString();
     }
 
-    //array to string converter
+    //String to Array converter
     public static int[] stringToArray(String num) {
         int[] numArr = new int[num.length()];
         for (int i = 0; i < numArr.length; i++)
