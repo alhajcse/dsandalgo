@@ -16,5 +16,6 @@ public class Main {
 
         System.out.println("Size "+array.getSize());
         array.display();
+        System.out.println("Generate Successfully");
     }
 }
